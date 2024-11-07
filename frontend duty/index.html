@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duty Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+    <div class="max-w-4xl mx-auto p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-indigo-500 mb-4">Duty Manager</h1>
+            <p class="text-xl text-gray-300">Organize your duties effortlessly with style</p>
+        </header>
+
+        <!-- Duty Add Form -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl font-semibold text-indigo-400 mb-6">Create a New Duty</h2>
+            <form id="dutyForm" class="space-y-6">
+                <div>
+                    <label for="title" class="block text-lg font-medium">Duty Title</label>
+                    <input type="text" id="title" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Enter duty title" required>
+                </div>
+
+                <div>
+                    <label for="dueDate" class="block text-lg font-medium">Due Date</label>
+                    <input type="date" id="dueDate" class="w-full p-4 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                </div>
+
+                <div class="flex items-center space-x-3">
+                    <input type="checkbox" id="finished" class="h-5 w-5 text-indigo-400">
+                    <label for="finished" class="text-lg font-medium">Finished?</label>
+                </div>
+
+                <button type="button" id="addButton" class="w-full bg-indigo-500 text-white p-4 rounded-xl text-lg font-medium transition-all hover:bg-indigo-600 active:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-300">Add Duty</button>
+            </form>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-semibold text-indigo-400 mb-6">Your Duties</h2>
+            <ul id="duties" class="space-y-6">
+                <!-- Duty items will be displayed here -->
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
